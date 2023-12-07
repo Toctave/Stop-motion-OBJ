@@ -216,7 +216,8 @@ class SequenceImportSettings(bpy.types.PropertyGroup):
         items=[('obj', 'OBJ', 'Wavefront OBJ'),
                ('stl', 'STL', 'STereoLithography'),
                ('ply', 'PLY', 'Stanford PLY'),
-               ('x3d', 'X3D', 'X3D Extensible 3D')],
+               ('x3d', 'X3D', 'X3D Extensible 3D'),
+               ],
         name='File Format',
         default='obj')
     dirPathIsRelative: bpy.props.BoolProperty(

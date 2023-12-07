@@ -557,6 +557,10 @@ class MeshImporter(bpy.types.PropertyGroup):
             axis_forward=self.axis_forward,
             axis_up=self.axis_up)
 
+    def loadX3D(self, filePath):
+        # call the X3D load function with all the correct parameters
+        bpy.ops.import_scene.x3d(filepath=filePath)
+
 
 class MeshNameProp(bpy.types.PropertyGroup):
     key: bpy.props.StringProperty()
@@ -603,7 +607,8 @@ class MeshSequenceSettings(bpy.types.PropertyGroup):
         items=[('obj', 'OBJ', 'Wavefront OBJ'),
                ('stl', 'STL', 'STereoLithography'),
                ('ply', 'PLY', 'Stanford PLY'),
-               ('x3d', 'X3D', 'X3D Extensible 3D')],
+               ('x3d', 'X3D', 'X3D Extensible 3D'),
+               ],
         name='File Format',
         default='obj')
 
